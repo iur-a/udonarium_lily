@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkudonarium=self.webpackChunkudonarium||[]).push([[6918],{6560:e=>{e.exports=JSON.parse('{"en_us":{"FinalFantasyXIV":{"directhit":"Direct Hit","normalhit":"Only Base Effect"}}}')}}]);

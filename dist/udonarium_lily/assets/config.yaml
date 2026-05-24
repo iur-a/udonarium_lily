@@ -1,0 +1,8 @@
+backend:
+  mode: skyway2023
+  url: https://udonarium-backend-vswt.onrender.com
+webrtc:
+  key: ''
+app:
+  title: ''
+  mode: ''

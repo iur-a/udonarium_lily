@@ -1,0 +1,1 @@
+{:version=>3, :sections=>[{:offset=>{:line=>0, :column=>0}, :map=>{:version=>3, :sourceRoot=>"", :sources=>["bcdice/version.rb"], :sourcesContent=>["# frozen_string_literal: true\n\nmodule BCDice\n  VERSION = \"3.16.1\"\nend\n"], :names=>["<main>", "<module:BCDice>"], :mappings=>"AAAAA,2BAAAA;EAAAA;;EAEAA,OAAAC;EAAAA;;IAAAA;;IACEA,OAAA,mCAAUA,QAAV;EADFA,GAAAA,WAAAA;AAFAD;"}}]}
