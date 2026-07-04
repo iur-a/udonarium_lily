@@ -3,9 +3,11 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  ElementRef,
   Input,
   OnDestroy,
   OnInit,
+  ViewChild,
 } from '@angular/core';
 import { EventSystem } from '@udonarium/core/system';
 import { DataElement } from '@udonarium/data-element';
@@ -24,6 +26,11 @@ export class GameDataElementBuffComponent implements OnInit, OnDestroy, AfterVie
   @Input() isTagLocked: boolean = false;
   @Input() isValueLocked: boolean = false;
   @Input() isPieceMode: boolean = false;
+
+  @ViewChild('currentValueInput') currentValueInputRef: ElementRef;
+
+  isPieceModeEdit: boolean = false;
+  private _pieceModeBlurTimer: any = null;
 
   private _name: string = '';
   get name(): string { return this._name; }
@@ -62,6 +69,7 @@ export class GameDataElementBuffComponent implements OnInit, OnDestroy, AfterVie
 
   ngOnDestroy() {
     EventSystem.unregister(this);
+    if (this._pieceModeBlurTimer) clearTimeout(this._pieceModeBlurTimer);
   }
 
   ngAfterViewInit() {
@@ -116,5 +124,31 @@ export class GameDataElementBuffComponent implements OnInit, OnDestroy, AfterVie
   
   deletBuff( data : DataElement ){
     data.destroy();
+  }
+
+  // コマ上バフの直接編集
+  enterPieceModeEdit(event: MouseEvent) {
+    event.stopPropagation();
+    this.isPieceModeEdit = true;
+    setTimeout(() => {
+      if (this.currentValueInputRef) {
+        this.currentValueInputRef.nativeElement.focus();
+        this.currentValueInputRef.nativeElement.select();
+      }
+    }, 0);
+  }
+
+  onPieceInputFocus() {
+    if (this._pieceModeBlurTimer) {
+      clearTimeout(this._pieceModeBlurTimer);
+      this._pieceModeBlurTimer = null;
+    }
+  }
+
+  onPieceInputBlur() {
+    this._pieceModeBlurTimer = setTimeout(() => {
+      this.isPieceModeEdit = false;
+      this._pieceModeBlurTimer = null;
+    }, 150);
   }
 }

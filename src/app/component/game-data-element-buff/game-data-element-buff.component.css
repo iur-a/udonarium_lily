@@ -224,3 +224,39 @@ input[type='range']::-ms-tooltip {
 .is-caret {
   caret-color: rgba(0,0,0,0.95);
 }
+
+/* コマ上バフ直接編集 */
+.piece-buff-display {
+  font-family: Cambria, Georgia;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+.piece-buff-display:hover {
+  background: rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+}
+.piece-buff-edit {
+  font-family: Cambria, Georgia;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+}
+.piece-buff-label {
+  white-space: nowrap;
+}
+.piece-buff-input {
+  width: 3.5em;
+  font-size: 11px;
+  background: white;
+  border: 1px solid #999;
+  border-radius: 2px;
+  padding: 0 2px;
+  color: #333;
+  caret-color: rgba(0,0,0,0.95);
+}
+.piece-buff-input-small {
+  width: 2.5em;
+}

@@ -71,8 +71,37 @@
   <ng-container *ngIf="gameDataElement.children.length < 1">
     <ng-container [ngSwitch]="gameDataElement.type">
       <ng-container *ngSwitchCase="'numberResource'">
-        <span style="font-family: Cambria, Georgia; font-size: 12px;">
-          {{gameDataElement.name}} / {{gameDataElement.currentValue}} / {{gameDataElement.value}}R 
+        <!-- 表示モード: クリックで編集 -->
+        <span *ngIf="!isPieceModeEdit"
+              class="piece-buff-display"
+              (mousedown)="enterPieceModeEdit($event)"
+              title="クリックして編集">
+          {{gameDataElement.name}} / {{gameDataElement.currentValue}} / {{gameDataElement.value}}R
+        </span>
+        <!-- 編集モード -->
+        <span *ngIf="isPieceModeEdit" class="piece-buff-edit">
+          <span class="piece-buff-label">{{gameDataElement.name}} /</span>
+          <input #currentValueInput
+                 type="text"
+                 class="piece-buff-input"
+                 [(ngModel)]="currentValue"
+                 (mousedown)="$event.stopPropagation()"
+                 (click)="$event.stopPropagation()"
+                 (focus)="onPieceInputFocus()"
+                 (blur)="onPieceInputBlur()"
+                 (keydown.enter)="isPieceModeEdit = false"
+                 (keydown.escape)="isPieceModeEdit = false">
+          <span class="piece-buff-label"> /</span>
+          <input type="number"
+                 class="piece-buff-input piece-buff-input-small"
+                 [(ngModel)]="value"
+                 (mousedown)="$event.stopPropagation()"
+                 (click)="$event.stopPropagation()"
+                 (focus)="onPieceInputFocus()"
+                 (blur)="onPieceInputBlur()"
+                 (keydown.enter)="isPieceModeEdit = false"
+                 (keydown.escape)="isPieceModeEdit = false">
+          <span class="piece-buff-label">R</span>
         </span>
       </ng-container>
     </ng-container>
