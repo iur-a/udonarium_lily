@@ -46,6 +46,7 @@ export class ChatTabComponent implements OnInit, AfterViewInit, OnDestroy, OnCha
     { from: 'System', to: '???', timestamp: 0, imageIdentifier: '', tag: '', name: 'チュートリアル > プレイヤー', text: 'また、過去のダイレクトメッセージはあなたのIDが更新されると同じルーム内であっても見えなくなります。注意してください。' },
     { from: 'System', timestamp: 0, imageIdentifier: '', tag: '', name: 'チュートリアル', text: '動作推奨環境はデスクトップChromeです。今のところ、スマホからだと上手く操作できません。' },
     { from: 'System', timestamp: 0, imageIdentifier: '', tag: '', name: 'チュートリアル', text: 'リリィ追加機能：チャット簡易表示機能は最初のチャット入力を入力すると使用可能になります。' },
+    { from: 'System', timestamp: 0, imageIdentifier: '', tag: '', name: 'チュートリアル', text: 'リリィ追加機能：チャットでHTMLタグによる装飾が使えます。<br><b>太字</b>：&lt;b&gt; / <i>斜体</i>：&lt;i&gt; / <u>下線</u>：&lt;u&gt; / <s>取消線</s>：&lt;s&gt; / <small>小文字</small>：&lt;small&gt; / <sup>上付</sup>：&lt;sup&gt; / <sub>下付</sub>：&lt;sub&gt; / <mark>ハイライト</mark>：&lt;mark&gt; / <font color="red">文字色</font>：&lt;font color="red"&gt; / 改行：&lt;br&gt;' },
     { from: 'System', timestamp: 0, imageIdentifier: '', tag: '', name: 'チュートリアル', text: 'チュートリアルは以上です。このチュートリアルは最初のチャットを入力すると非表示になります。' },
   ];
 
