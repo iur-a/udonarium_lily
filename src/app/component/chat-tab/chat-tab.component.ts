@@ -46,7 +46,7 @@ export class ChatTabComponent implements OnInit, AfterViewInit, OnDestroy, OnCha
     { from: 'System', to: '???', timestamp: 0, imageIdentifier: '', tag: '', name: 'チュートリアル > プレイヤー', text: 'また、過去のダイレクトメッセージはあなたのIDが更新されると同じルーム内であっても見えなくなります。注意してください。' },
     { from: 'System', timestamp: 0, imageIdentifier: '', tag: '', name: 'チュートリアル', text: '動作推奨環境はデスクトップChromeです。今のところ、スマホからだと上手く操作できません。' },
     { from: 'System', timestamp: 0, imageIdentifier: '', tag: '', name: 'チュートリアル', text: 'リリィ追加機能：チャット簡易表示機能は最初のチャット入力を入力すると使用可能になります。' },
-    { from: 'System', timestamp: 0, imageIdentifier: '', tag: '', name: 'チュートリアル', text: 'リリィ追加機能：チャットでHTMLタグによる装飾ができます。＜ ＞を半角にして入力してください。<br><b>太字</b> → ＜b＞文字＜/b＞<br><i>斜体</i> → ＜i＞文字＜/i＞<br><u>下線</u> → ＜u＞文字＜/u＞<br><s>取消線</s> → ＜s＞文字＜/s＞<br><small>小文字</small> → ＜small＞文字＜/small＞<br><sup>上付き</sup>文字<sub>下付き</sub> → ＜sup＞＜sub＞<br><mark>ハイライト</mark> → ＜mark＞文字＜/mark＞<br><font color="red">文字色</font> → ＜font color="red"＞文字＜/font＞<br>改行 → ＜br＞' },
+    { from: 'System', timestamp: 0, imageIdentifier: '', tag: '', name: 'チュートリアル', text: 'リリィ追加機能：チャットで《》記法による装飾ができます。《b》太字《/b》 → 《b》文字《/b》《br》《i》斜体《/i》 → 《i》文字《/i》《br》《u》下線《/u》 → 《u》文字《/u》《br》《s》取消線《/s》 → 《s》文字《/s》《br》《small》小文字《/small》 → 《small》文字《/small》《br》《sup》上付き《/sup》 → 《sup》文字《/sup》《br》《sub》下付き《/sub》 → 《sub》文字《/sub》《br》《mark》ハイライト《/mark》 → 《mark》文字《/mark》《br》《font:red》文字色《/font》 → 《font:色名か#RRGGBB》文字《/font》《br》改行 → 《br》' },
     { from: 'System', timestamp: 0, imageIdentifier: '', tag: '', name: 'チュートリアル', text: 'チュートリアルは以上です。このチュートリアルは最初のチャットを入力すると非表示になります。' },
   ];
 
